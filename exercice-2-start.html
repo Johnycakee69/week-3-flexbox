@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+
+      body{
+        margin: 0;
+        padding: 0;
+      }
+
+      .main {
+        height: 100vh;
+        background: #25384B;
+
+        /* dark blue row:
+           - padding-left / padding-right 3em = dark strips on the outer edges
+           - gap 3em = dark strip between the two sections */
+        display: flex;
+        padding-left: 3em;
+        padding-right: 3em;
+        gap: 3em;
+      }
+
+      .left-section {
+        background: #A3CFCC;
+
+        /* stretches to fill all the remaining width (the double arrow) */
+        flex-grow: 1;
+      }
+
+      .right-section {
+        background: #F7CFB6;
+
+        /* 10em wide (content) + 1em padding on each side,
+           it is ALSO a flexbox container itself */
+        width: 10em;
+        padding: 1em;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+      }
+
+      .item {
+        background: #86C2DE;
+
+        /* 100px base, then grows to fill the full column height */
+        height: 100px;
+        flex-grow: 1;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <section class="left-section"></section>
+      <section class="right-section">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </section>
+    </div>
+  </body>
+</html>
